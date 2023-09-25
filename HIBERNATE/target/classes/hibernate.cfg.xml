@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-configuration SYSTEM
+"https://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+
+<hibernate-configuration>
+<session-factory>
+	<property name="connection.driver_class">com.mysql.jdbc.Driver</property>
+		<property name="connection.url">jdbc:mysql://localhost:3306/HIBERDatabase</property>
+		<property name="connection.username">root</property>
+		<property name="connection.password">tejas@mysql123</property>
+		<property name="dialect">org.hibernate.dialect.MySQL5Dialect</property>
+		<property name="hbm2ddl.auto">update</property>
+		<property name="show_sql">true</property>
+		
+		<mapping class="com.tut.Student"/>
+		<mapping class="com.tut.Address"/>
+		<mapping class="com.mappings.Question"/>
+		<mapping class="com.mappings.Answer"/>
+		
+		<mapping class="com.oneToMany.Question1"/>
+		<mapping class="com.oneToMany.Answer1"/>
+		
+		
+		<mapping class="com.ManyToMany.Employee"/>
+		<mapping class="com.ManyToMany.Project"/>
+</session-factory>
+
+</hibernate-configuration>
